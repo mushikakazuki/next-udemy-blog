@@ -6,16 +6,14 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useActionState } from 'react';
-import { authenticate } from '@/lib/actions/authenticate.ts';
-import { useSearchParams } from 'next/navigation';
+import { authenticate } from '@/lib/actions/authenticate';
 
 export default function LoginForm() {
-    const [errorMessage, formAction, isPending] = useActionState(
+    const [errorMessage, formAction] = useActionState(
     authenticate,
     undefined,
     );
@@ -48,7 +46,6 @@ export default function LoginForm() {
                     </div>
                 </form>
             </CardContent>
-            
         </Card>
     )
     }
