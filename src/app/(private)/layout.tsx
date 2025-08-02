@@ -9,7 +9,9 @@ export default function PrivateLayout({
   return (
     <>
         <PrivateHeader />
-        {children}
+        <div className='container mx-auto px-4 py-8'>
+          {children}
+        </div>
     </>
   )
 }
