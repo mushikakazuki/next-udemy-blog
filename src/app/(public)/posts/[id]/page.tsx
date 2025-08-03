@@ -7,7 +7,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 
-import { format, formatDistanceToNow } from 'date-fns'
+import { format } from 'date-fns'
 import { ja } from 'date-fns/locale'
 import Image from "next/image"
 import ReactMarkdown from "react-markdown";

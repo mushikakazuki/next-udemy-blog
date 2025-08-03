@@ -1,4 +1,3 @@
-import { filePath } from './../../node_modules/zod/src/v3/tests/language-server.source';
 import { writeFile } from "fs/promises";
 import path from "path";
 
@@ -11,7 +10,7 @@ export async function saveImage(file: File): Promise<string | null> {
         const filePath = path.join(uploadDir, fileName)
         await writeFile(filePath, buffer);
         return `/images/${fileName}`
-    } catch(error) {
+    } catch {
         return null
     }
 }

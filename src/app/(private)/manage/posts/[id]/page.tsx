@@ -31,8 +31,6 @@ export default async function showPage({params}:Params) {
     const {id} = await params;
     const post = await getOwnPost(userId, id);
 
-    console.log(post);
-
     if(!post) {
         notFound()
     }
